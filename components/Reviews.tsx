@@ -46,7 +46,7 @@ const Reviews = () => {
         }
 
         const percentage = Math.abs(newX)/width;
-        setActiveIndex(Math.floor(percentage));percentage
+        setActiveIndex(Math.floor(percentage));
 
         return newX;
       });

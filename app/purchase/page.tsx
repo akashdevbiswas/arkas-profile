@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import creationImage from "@/public/creations-image.svg";
-import { Button } from "@/components";
-import { Book, BuyOption } from "@/constants";
+import { Book } from "@/constants";
 import BuyForm from "@/components/BuyForm";
 import Heading from "@/components/Heading";
 
