@@ -1,7 +1,6 @@
 "use client";
 import React from 'react'
 import Link from 'next/link'
-import { GiHamburgerMenu } from "react-icons/gi";
 
 
 const Navbar = () => {
@@ -16,9 +15,6 @@ const Navbar = () => {
             <a href='#books'>Books</a>
             <a href='#posts'>Posts</a>
             <a href='#archive'>Archive</a>
-        </div>
-        <div className='md:hidden w-fit '>
-            <GiHamburgerMenu className='text-3xl' />
         </div>
     </nav>
   )

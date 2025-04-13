@@ -14,7 +14,7 @@ export default function HomePage() {
           src={heroImage}
           priority
         />
-        <div className="fade-in__animation opacity-0 w-fit absolute top-1/2 left-1/2 -translate-1/2 flex flex-col gap-3">
+        <div className="fade-in__animation opacity-0 w-fit absolute top-1/2 left-1/2 -translate-1/2 flex flex-col gap-6">
           <h1 className=" mx-auto text-nowrap text-white italiana-regular w-fit text-center text-5xl md:text-6xl xl:text-[96px]">
             Ritwik Ghosh
           </h1>

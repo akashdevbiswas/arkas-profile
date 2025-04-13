@@ -36,7 +36,7 @@ export default function RootLayout({
           {children}
         </main>
         <footer>
-          <div className="flex md:flex-row flex-col-reverse items-center justify-between h-fit md:h-[100px] px-[20px] md:px-[40px] xl:px-[120px] py-4">
+          <div className="flex md:flex-row flex-col-reverse items-center justify-between h-fit md:h-[100px] px-[20px] md:px-[40px] xl:px-[120px] py-4 gap-2 md:gap-0">
             <p className="text-center w-fit">© 2025 Ligft Media All rights reserved.</p>
             <div className="flex gap-2 items-center">
               <p>Site By</p>

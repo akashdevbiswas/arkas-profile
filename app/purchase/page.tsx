@@ -55,7 +55,7 @@ const PurchasePage = () => {
 
       <div className="h-fit mt-[50px] md:mt-[100px] p-[1px]">
         <Heading heading="About the Book" />
-        <p className="font-outfit font-light px-4 md:px-0 text-xl mt-[55px] w-full md:w-[60%] text-center mx-auto mb-[100px] md:mb-[220px]">
+        <p className="font-outfit font-light px-4 md:px-0 text-xl mt-[55px] w-full md:w-[60%] text-center mx-auto mb-[50px] md:mb-[220px]">
           {about}
         </p>
       </div>
