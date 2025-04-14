@@ -14,6 +14,7 @@
   --font-outfit: 'Outfit', sans-serif;
   --font-rubik: 'Rubik', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
+  --font-im: "IM Fell French Canon SC", serif;
 }
 
 
@@ -43,14 +44,16 @@ body {
 }
 
 .main__container{
-  @apply w-[375px] md:w-[600px] lg:w-[700px] xl:w-[820px]
+  @apply w-[98%] md:w-[600px] lg:w-[700px] xl:w-[820px]
 }
-
+.ham__nav a{
+  @apply font-outfit text-2xl font-medium
+}
 .nav__links{
   @apply hidden md:flex md:gap-4 lg:gap-8
 }
 .nav__links a{
-  @apply cursor-pointer font-outfit font-extralight
+  @apply cursor-pointer font-outfit font-extralight text-2xl
 }
 .gradient_bg{
   @apply bg-gradient-to-b from-[#CAD2DC] to-white;
@@ -69,12 +72,8 @@ body {
   animation-fill-mode: forwards;
 }
 
-.fade-in__scroll{
-  animation: fade-in;
-  animation-duration: 2s;
-  animation-delay: 300ms;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+.scroll__appear{
+  @apply transition-opacity delay-[250ms] duration-1000 ease-in-out ;
 }
 
 @keyframes fade-in {

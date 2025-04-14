@@ -19,6 +19,18 @@ const Reviews = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const [width,setWidth] = useState(0);
+
+
+  useEffect(()=>{
+
+    const width = ref.current?.getBoundingClientRect().width;
+
+    if(width){
+      setWidth(+width);
+    }
+
+  },[]);
 
 
   const handleRightClick = () => {
@@ -107,7 +119,7 @@ const Reviews = () => {
       style={{
         opacity: isVisible ? 1 : 0,
       }}
-      className={` transition-opacity delay-[250ms] duration-1000 ease-in-out w-full h-[300px] md:h-[450px] flex flex-col justify-between py-4 md:py-10 mt-[50px] md:mt-[100px]`}
+      className={`scroll__appear w-full h-[300px] md:h-[450px] flex flex-col justify-between py-4 md:py-10 mt-[50px] md:mt-[100px]`}
     >
       <div className="w-[60px] md:w-[90px] lg:w-[120px] xl:w-fit mx-auto">
         <Image alt="comma" src={comma} className="w-full object-cover" />
@@ -146,7 +158,8 @@ const Reviews = () => {
             >
               {reviews.map((review, index) => (
                 <p
-                  className="text-xl md:text-3xl main__container italiana-regular text-center px-[40px] md:px-[10px]"
+                style={{width: `${width}px`}}
+                  className="text-xl md:text-3xl  italiana-regular text-center px-[40px] md:px-[10px]"
                   key={index}
                 >
                   {review}

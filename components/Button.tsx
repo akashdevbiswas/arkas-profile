@@ -14,10 +14,10 @@ const Button = ({
     btnType?:BtnType
 }) => {
 
-    const type = btnType === 'primary' || !btnType ? ' hover:bg-black hover:text-white border border-black' : 'bg-[#FFE100] text-black hover:bg-black hover:text-[#FFE100]'
+    const type = btnType === 'primary' || !btnType ? ' hover:bg-black hover:text-white border-2 border-black' : 'bg-[#FFE100] text-black hover:bg-black hover:text-[#FFE100]'
 
   return (
-    <Link href={url?url:"/"} className={`${type} transition-colors duration-300  rounded-md min-w-fit p-[10px] text-center ${className}`}>
+    <Link href={url?url:"/"} className={`${type} transition-colors duration-300  rounded-xl min-w-fit p-[10px] text-center font-outfit font-medium ${className}`}>
         {buttonName}
     </Link>
   )

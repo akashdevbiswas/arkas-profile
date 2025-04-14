@@ -2,15 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Navbar } from "@/components";
-import developer from "@/public/deleveloper.svg"
+import developer from "@/public/deleveloper.svg";
 import Image from "next/image";
 
-import {Italiana} from 'next/font/google'
+import { Italiana } from "next/font/google";
 import { Rubik } from "next/font/google";
 
-
-const italiana = Italiana({ weight: '400', subsets: ['latin'] });
-const rubik = Rubik({ weight: '300', subsets: ['latin'] });
+const italiana = Italiana({ weight: "400", subsets: ["latin"] });
+const rubik = Rubik({ weight: "300", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Arkas Creation | Writer",
@@ -22,25 +21,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`scroll-smooth ${italiana.className} ${rubik.className}  relative`}
+        className={`${italiana.className} ${rubik.className} relative overflow-x-hidden`}
       >
-        <header className="absolute top-0 z-10 w-full">
-          <div className="relative overflow-x-hidden">
-            <Navbar/>
-          </div>
+        <header className="absolute top-0 z-10 w-full scroll-smooth">
+          <Navbar />
         </header>
-        <main>
-          {children}
-        </main>
+        <main className="z-20">{children}</main>
         <footer>
           <div className="flex md:flex-row flex-col-reverse items-center justify-between h-fit md:h-[100px] px-[20px] md:px-[40px] xl:px-[120px] py-4 gap-2 md:gap-0">
-            <p className="text-center w-fit">© 2025 Ligft Media All rights reserved.</p>
+            <p className="text-center w-fit">
+              © 2025 Ligft Media All rights reserved.
+            </p>
             <div className="flex gap-2 items-center">
               <p>Site By</p>
-              <Image alt='developer' src={developer}/>
+              <Image alt="developer" src={developer} />
             </div>
           </div>
         </footer>

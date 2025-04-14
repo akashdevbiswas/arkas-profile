@@ -12,7 +12,7 @@ const BuyForm = ({ buyOptions }: { buyOptions: BuyOption[] }) => {
   };
 
   return (
-    <div className="w-full flex flex-col gap-5 mt-[20px]">
+    <div className="w-full flex flex-col gap-10 mt-[20px]">
       <div className="h-auto flex flex-wrap gap-4">
         {buyOptions.map((bO, index) => (
           <Options

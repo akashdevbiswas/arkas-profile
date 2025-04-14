@@ -2,17 +2,25 @@ import men from "@/public/men.jpg";
 import women from "@/public/women.jpg";
 import paper from "@/public/paper.jpg";
 import { StaticImageData } from "next/image";
+import first from "@/public/ver4.jpeg";
+import second from "@/public/hori1.jpeg";
+import third from "@/public/hori9.jpeg";
+import forth from "@/public/hori2.jpeg";
+import fifth from "@/public/hori3.jpeg";
+import sixth from "@/public/ver2.jpeg";
 
 const constants: {
   reviews: string[];
   books: Book[];
   blogs: Blogs[];
+  gallery: StaticImageData[];
 } = {
+  gallery: [first, second, third, forth, fifth, sixth],
   reviews: [
     "I am a man of science. I don’t consider myself an activist. I am here to just observe report and draw conclusions. I leave activism to the activists.",
     "I am a man of science. I don’t consider myself an activist. I am here to just observe report and draw conclusions. I leave activism to the activists.",
     "I am a man of science. I don’t consider myself an activist. I am here to just observe report and draw conclusions. I leave activism to the activists.",
-    "I am a man of science. I don’t consider myself an activist. I am here to just observe report and draw conclusions. I leave activism to the activists."
+    "I am a man of science. I don’t consider myself an activist. I am here to just observe report and draw conclusions. I leave activism to the activists.",
   ],
   books: [
     {
