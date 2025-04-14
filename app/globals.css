@@ -50,10 +50,13 @@ body {
   @apply font-outfit text-2xl font-medium
 }
 .nav__links{
-  @apply hidden md:flex md:gap-4 lg:gap-8
+  @apply hidden md:flex 
 }
 .nav__links a{
-  @apply cursor-pointer font-outfit font-extralight text-2xl
+  @apply cursor-pointer font-outfit font-extralight text-2xl md:px-2 lg:px-4;
+}
+.nav__links a:not(:last-child){
+  @apply border-r-2 border-black
 }
 .gradient_bg{
   @apply bg-gradient-to-b from-[#CAD2DC] to-white;

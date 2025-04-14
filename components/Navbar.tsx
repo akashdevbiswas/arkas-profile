@@ -13,7 +13,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`main__container mx-auto h-auto items-center flex justify-between px-4`}>
+    <nav className={`main__container mx-auto h-auto md:items-center flex justify-between px-4`}>
       <Link href={"/"} className="cursor-pointer mt-4 md:mt-[27px]">
         <h1 className={`text-[27px] ml-3 italiana-regular italiana-regular `}>
           Ritwik Ghosh
@@ -30,7 +30,7 @@ const Navbar = () => {
         <GiHamburgerMenu className="text-3xl" />
       </span>}
 
-      <div className="nav__links mt-4 md:mt-[27px]">
+      <div className="nav__links md:mt-[27px]">
         <a href="#about">About</a>
         <a href="#quotes">Quotes</a>
         <a href="#books">Books</a>
