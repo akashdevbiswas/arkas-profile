@@ -3,7 +3,6 @@ import Image, { StaticImageData } from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import constants from "@/constants";
 import Heading from "./Heading";
-import Button from "./Button";
 
 const Blogs = () => {
   const { blogs } = constants;
@@ -16,8 +15,9 @@ const Blogs = () => {
         className="main__container mx-auto "
       >
         <div className="grid md:grid-cols-3 gap-5 justify-items-center mt-[50px] md:mt-[100px]">
-          {blogs.map(({ title, writerName, image }, index) => (
+          {blogs.map(({ title, writerName, image, url }, index) => (
             <BlogsCard
+              url={url}
               key={index}
               title={title}
               writerName={writerName}
@@ -35,12 +35,14 @@ const BlogsCard = ({
   className,
   title,
   image,
+  url
 }: {
   className?: string;
   image: StaticImageData;
   title: string;
   writerName: string;
   index: number;
+  url:string
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef(null);
@@ -64,7 +66,8 @@ const BlogsCard = ({
   }, []);
 
   return (
-    <div
+    <a
+      href={url}
       ref={elementRef}
       style={{ opacity: `${isVisible ? 1 : 0}` }}
       className={`scroll__appear md:w-[260px] w-full md:min-h-[326px] md:h-fit pb-5 md:pb-0 rounded-md flex flex-col ${className} drop-shadow-xl bg-white`}
@@ -79,11 +82,11 @@ const BlogsCard = ({
         />
       </div>
       <div className="h-full flex flex-col px-4">
-        <h3 className="text-lg md:text-xl w-fit mx-auto font-outfit font-semibold text-center ">
+        <h2  className="text-lg md:text-xl w-fit mx-auto font-outfit font-semibold text-center ">
           {title}
-        </h3>
+        </h2>
       </div>
-    </div>
+    </a>
   );
 };
 

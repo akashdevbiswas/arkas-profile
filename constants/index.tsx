@@ -45,6 +45,7 @@ const constants: {
       title: "Death Note of a Dreamer",
       writerName: "Ritwik Ghosh",
       image: paper,
+      url:'',
       writing: [
         `
 When they talk death
@@ -117,6 +118,7 @@ And that is all but crystal clear
       title: "To be a Man",
       writerName: "Ritwik Ghosh",
       image: men,
+      url:'',
       writing: [
         `It\’s a disgrace to being a man
         If you falter; to do what you can
@@ -164,6 +166,7 @@ And that is all but crystal clear
       title: "The Breakfast Girl",
       writerName: "Ritwik Ghosh",
       image: women,
+      url:'',
       writing: [
         `Among all the smiles
 In this fleeting world;
@@ -209,4 +212,5 @@ export interface Blogs {
   writerName: string;
   image: StaticImageData;
   writing: string[];
+  url:string;
 }
