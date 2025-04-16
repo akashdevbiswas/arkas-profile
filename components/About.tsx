@@ -42,7 +42,7 @@ const About = () => {
         />
       </div>
       <div className="w-full md:w-1/2 bg-white flex flex-col items-center gap-4 md:gap-8 py-[10px] md:pt-[40px] h-full">
-        <h2 className="text-3xl md:text-[32px] italiana-regular mt-10 md:mt-0">
+        <h2 className="text-3xl md:text-[32px] font-italiana mt-10 md:mt-0">
           About Me
         </h2>
         <div className="w-[85%] flex flex-col gap-3 md:gap-5">
