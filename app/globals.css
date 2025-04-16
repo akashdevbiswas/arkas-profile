@@ -38,7 +38,7 @@ body {
 }
 
 .main__container{
-  @apply w-[98%] md:w-[600px] lg:w-[700px] xl:w-[820px]
+  @apply w-[98%] md:w-[600px] lg:w-[700px] xl:w-[820px];
 }
 .ham__nav a{
   @apply font-outfit text-2xl font-extralight;

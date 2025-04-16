@@ -41,8 +41,8 @@ const About = () => {
           className=" w-full h-full max-h-[450px] md:max-h-full object-cover"
         />
       </div>
-      <div className="w-full md:w-1/2 bg-white flex flex-col items-center gap-4 md:gap-8 py-[10px] md:pt-[40px] h-full">
-        <h2 className="text-3xl md:text-[32px] font-italiana mt-10 md:mt-0">
+      <div className="w-full md:w-1/2 bg-white flex flex-col items-center gap-2 md:gap-8 pt-[20px] pb-[30px] md:pb-0 md:pt-[40px] h-full">
+        <h2 className="text-3xl md:text-[32px] font-italiana mt-[15px] md:mt-0">
           About Me
         </h2>
         <div className="w-[85%] flex flex-col gap-3 md:gap-5">

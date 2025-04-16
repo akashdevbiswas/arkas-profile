@@ -30,13 +30,13 @@ const Navbar = () => {
         <GiHamburgerMenu className="text-3xl" />
       </span>}
 
-      <div className="nav__links">
+      { pathname !=='/purchase' && <div className="nav__links">
         <a href="#about">About</a>
         <a href="#quotes">Quotes</a>
-        <a href="#books">Books</a>
+        <a href="#creations">Books</a>
         <a href="#posts">Posts</a>
         <a href="#archive">Archive</a>
-      </div>
+      </div>}
       <div className={`transition-all absolute h-screen -z-10 bg-white opacity-40 ease-in-out right-0 duration-1000 ${open? 'translate-x-0 w-full':'translate-x-full w-0'}`}>
 
       </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className="flex flex-col items-center font-outfit ham__nav mx-auto w-full gap-8">
           <a href="#about">About</a>
           <a href="#quotes">Quotes</a>
-          <a href="#books">Books</a>
+          <a href="#creations">Books</a>
           <a href="#posts">Posts</a>
           <a href="#archive">Archive</a>
         </div>

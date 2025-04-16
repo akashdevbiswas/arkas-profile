@@ -8,6 +8,11 @@ const BuyForm = ({ buyOptions }: { buyOptions: BuyOption[] }) => {
   const [selectedOption, setSelectedOption] = useState(0);
 
   const handleOnClick = (index: number) => {
+
+    const {inStock} = buyOptions[index];
+    if(!inStock){
+      return;
+    }
     setSelectedOption(index);
   };
 
@@ -16,6 +21,7 @@ const BuyForm = ({ buyOptions }: { buyOptions: BuyOption[] }) => {
       <div className="h-auto flex flex-wrap gap-4">
         {buyOptions.map((bO, index) => (
           <Options
+
             key={index}
             buyOptions={bO}
             onClick={() => handleOnClick(index)}
@@ -43,7 +49,7 @@ const Options = ({
       onClick={onClick}
       className={`border ${
         selected ? "border-[#87CEEB] border-2" : "border-[#D0D0D0]"
-      } w-[150px] flex flex-col items-center rounded-md`}
+      } w-[150px] md:w-[190px] flex flex-col items-center rounded-md cursor-pointer ${inStock?'opacity-100':'opacity-65'}`}
     >
         
       <p className="font-outfit text-xl font-semibold w-fit pt-[10px]">

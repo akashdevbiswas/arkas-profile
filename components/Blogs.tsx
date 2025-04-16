@@ -3,6 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import constants from "@/constants";
 import Heading from "./Heading";
+import Button from "./Button";
 
 const Blogs = () => {
   const { blogs } = constants;
@@ -66,7 +67,7 @@ const BlogsCard = ({
     <div
       ref={elementRef}
       style={{ opacity: `${isVisible ? 1 : 0}` }}
-      className={`scroll__appear w-[90%] md:w-full h-[324px] pb-5 rounded-md flex flex-col ${className} justify-between drop-shadow-xl bg-white`}
+      className={`scroll__appear md:w-[260px] w-full md:min-h-[326px] md:h-fit pb-5 md:pb-0 rounded-md flex flex-col ${className} drop-shadow-xl bg-white`}
     >
       <div className="w-full h-fit rounded-md">
         <Image
@@ -77,8 +78,8 @@ const BlogsCard = ({
           className="h-[252px] w-full md:w-[260px] object-cover rounded-t-lg"
         />
       </div>
-      <div className="h-full flex flex-col py-2 px-4">
-        <h3 className="text-lg md:text-xl w-fit mx-auto font-outfit font-semibold">
+      <div className="h-full flex flex-col px-4">
+        <h3 className="text-lg md:text-xl w-fit mx-auto font-outfit font-semibold text-center ">
           {title}
         </h3>
       </div>
