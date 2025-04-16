@@ -14,7 +14,7 @@ export default function HomePage() {
           priority
         />
         <div className="fade-in__animation opacity-0 w-fit absolute top-7/12 left-1/2 -translate-1/2 flex flex-col gap-6">
-          <h1 className=" mx-auto text-nowrap uppercase text-white font-italiana w-full md:w-fit text-center text-4xl -translate-x-3 md:text-6xl xl:text-[96px]">
+          <h1 className=" mx-auto text-nowrap uppercase md:normal-case text-white font-italiana w-full md:w-fit text-center text-4xl -translate-x-3 md:text-6xl xl:text-[96px]">
             Ritwik Ghosh
           </h1>
         </div>

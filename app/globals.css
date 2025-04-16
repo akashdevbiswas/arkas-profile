@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
+
 
 
 :root {
@@ -7,15 +11,17 @@
   --foreground: #171717;
 }
 
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-italiana: 'Italiana', sans-serif;
-  --font-outfit: 'Outfit', sans-serif;
-  --font-rubik: 'Rubik', sans-serif;
-  --font-poppins: 'Poppins', sans-serif;
-  --font-im: "IM Fell French Canon SC", serif;
+  --font-italiana: "Italiana", sans-serif;
+  --font-outfit: "Outfit", sans-serif;;
+  --font-rubik: "Rubik", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
+
+
 
 
 /* @media (prefers-color-scheme: dark) {
@@ -31,29 +37,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.italiana-regular {
-  font-family: "Italiana", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.rubik-regular {
-  font-family: "Rubik", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
 .main__container{
   @apply w-[98%] md:w-[600px] lg:w-[700px] xl:w-[820px]
 }
 .ham__nav a{
-  @apply font-outfit text-2xl font-medium
+  @apply font-outfit text-2xl font-extralight;
 }
 .nav__links{
-  @apply hidden md:flex 
+  @apply hidden md:flex;
 }
 .nav__links a{
-  @apply cursor-pointer font-outfit font-extralight text-2xl md:px-2 lg:px-4;
+  @apply cursor-pointer text-2xl md:px-2 lg:px-4 font-outfit font-extralight h-fit;
+}
+.nav__links a:not(:last-child){
+  @apply border-r-2 ;
+}
+.nav__links a:last-child{
+  @apply  md:pl-2 lg:pl-4 font-outfit;
 }
 .nav__links a:not(:last-child){
   @apply border-r-2 border-black
@@ -67,6 +67,9 @@ body {
 .nav__links-mobile a{
   @apply font-semibold
 }
+.quote-button{
+  @apply cursor-pointer h-[50px] z-10 absolute top-[20%];
+}
 
 .fade-in__animation{
   animation: fade-in;
@@ -77,6 +80,13 @@ body {
 
 .scroll__appear{
   @apply transition-opacity delay-[250ms] duration-1000 ease-in-out ;
+}
+
+.rubik-300__italic {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
 }
 
 @keyframes fade-in {

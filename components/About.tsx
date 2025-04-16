@@ -30,7 +30,7 @@ const About = () => {
       style={{ opacity: isVisible ? 1 : 0 }}
       ref={elementRef}
       id="about"
-      className="scroll__appear flex flex-col-reverse  md:flex-row w-full main__container -mt-[30px] md:-mt-[30px] h-fit md:h-[550px] mx-auto"
+      className="scroll__appear flex flex-col-reverse md:flex-row w-full main__container -mt-[30px] md:-mt-[30px] h-fit md:h-[550px] mx-auto"
     >
       <div className="w-full md:w-1/2">
         <Image

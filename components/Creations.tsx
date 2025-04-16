@@ -50,7 +50,7 @@ const Creations = () => {
           <h3 className="font-outfit font-medium text-xl tracking-[4px]">
             THE FIRST CREATION
           </h3>
-          <p className="w-[90%] md:w-[65%] font-outfit text-base md:text-[20px] font-light mx-auto md:mx-0">
+          <p className="w-[90%] md:w-[58%] leading-5 md:leading-7 font-outfit text-base md:text-[20px] font-light mx-auto md:mx-0">
             The book tells the story of a personal revolution against the triad
             of tyranny, a system plagued by the stench of entrenched rot and an
             ignorance most grim. It is the story of a young investigative

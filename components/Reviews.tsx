@@ -119,20 +119,20 @@ const Reviews = () => {
       style={{
         opacity: isVisible ? 1 : 0,
       }}
-      className={`scroll__appear w-full h-[300px] md:h-[450px] flex flex-col justify-between py-4 md:py-10 mt-[50px] md:mt-[100px]`}
+      className={`scroll__appear w-full h-[300px] md:h-[450px] flex flex-col gap-10 lg:gap-[70px] py-4 md:py-10 mt-[50px] md:mt-[70px]`}
     >
       <div className="w-[60px] md:w-[90px] lg:w-[120px] xl:w-fit mx-auto">
         <Image alt="comma" src={comma} className="w-full object-cover" />
       </div>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-10 lg:gap-[70px]">
         <div className="relative">
           <button
             disabled={disableButton.left}
             onClick={handleLeftClick}
-            className="absolute top-[20%] left-[4%] md:left-[10%] cursor-pointer h-[50px] z-10"
+            className="quote-button left-[4%] md:left-[10%] "
           >
             <MdArrowBackIosNew
-              className={`text-xl md:text-3xl ${
+              className={`text-xl md:text-5xl ${
                 disableButton.left ? "opacity-50" : ""
               } text-[#0D86C8]`}
             />
@@ -140,10 +140,10 @@ const Reviews = () => {
           <button
             disabled={disableButton.right}
             onClick={handleRightClick}
-            className="absolute top-[20%] right-[2%] md:right-[10%] cursor-pointer h-[50px] z-10"
+            className=" right-[4%] md:right-[10%] quote-button"
           >
             <MdArrowForwardIos
-              className={`text-xl md:text-3xl ${
+              className={`text-xl md:text-5xl ${
                 disableButton.right ? "opacity-50" : ""
               } text-[#0D86C8]`}
             />
@@ -159,10 +159,10 @@ const Reviews = () => {
               {reviews.map((review, index) => (
                 <p
                 style={{width: `${width}px`}}
-                  className="text-xl md:text-3xl  italiana-regular text-center px-[40px] md:px-[10px]"
+                  className="text-xl md:text-[32px] font-italiana text-center px-[40px] md:px-[10px]"
                   key={index}
                 >
-                  {review}
+                  <q>{review}</q>
                 </p>
               ))}
             </div>

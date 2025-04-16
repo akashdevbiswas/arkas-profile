@@ -13,15 +13,15 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`main__container mx-auto h-auto md:items-center flex justify-between px-4`}>
-      <Link href={"/"} className="cursor-pointer mt-4 md:mt-[27px]">
-        <h1 className={`text-[27px] ml-3 italiana-regular italiana-regular `}>
+    <nav className={`main__container mx-auto h-auto flex justify-between md:mt-[27px] md:items-center`}>
+      <Link href={"/"} className="cursor-pointer ">
+        <h1 className={`text-[27px] md:text-[32px] ml-3 font-italiana h-fit mt-4 md:mt-0`}>
           Ritwik Ghosh
         </h1>
       </Link>
 
       { pathname !=='/purchase' && <span
-        className="mt-4 md:mt-[27px] md:hidden"
+        className="mt-4 mr-4 md:hidden"
         onClick={() =>{
           setOpen(true);
           document.body.style.overflow= "hidden";
@@ -30,7 +30,7 @@ const Navbar = () => {
         <GiHamburgerMenu className="text-3xl" />
       </span>}
 
-      <div className="nav__links md:mt-[27px]">
+      <div className="nav__links">
         <a href="#about">About</a>
         <a href="#quotes">Quotes</a>
         <a href="#books">Books</a>

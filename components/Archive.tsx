@@ -31,10 +31,10 @@ const Archive = () => {
       }, []);
 
   return (
-    <div ref={elementRef} style={{opacity: `${isVisible?1:0}`}} id='archive' className='bg-[#DAC2A0] mt-[50px] md:mt-[100px] pt-4 flex flex-col gap-5 lg:gap-12 scroll__appear '>
-        <div className='main__container mx-auto flex flex-col gap-5'>
-            <h2 className='w-fit mx-auto text-3xl lg:text-[40px] italiana-regular mt-5 '>THE ARCHIVE</h2>
-            <p className='w-[90%] lg:w-[646] mx-auto text-center rubik-regular text-base md:text-[20px] leading-5 '>Here resides some photos, notes and memoirs associated with the author&apos;s life. As new items become available, this remarkable body of work will evolve while being accessible to all.</p>
+    <div ref={elementRef} style={{opacity: `${isVisible?1:0}`}} id='archive' className='bg-[#DAC2A0] mt-[50px] md:mt-[100px] pt-4 flex flex-col gap-5 lg:gap-[51px] scroll__appear '>
+        <div className='main__container mx-auto flex flex-col gap-2'>
+            <h2 className='w-fit mx-auto text-3xl lg:text-[40px] font-italiana mt-5 '>THE ARCHIVE</h2>
+            <p className='w-[90%] lg:w-[646] mx-auto text-center font-rubik italic font-[300] text-base md:text-xl leading-6'>Here resides some photos, notes and memoirs associated with the author&apos;s life. As new items become available, this remarkable body of work will evolve while being accessible to all.</p>
         </div>
         <div className='w-full h-auto md:h-[286px] flex flex-col md:flex-row '>
             {

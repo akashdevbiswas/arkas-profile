@@ -5,11 +5,6 @@ import { Navbar } from "@/components";
 import developer from "@/public/deleveloper.svg";
 import Image from "next/image";
 
-import { Italiana } from "next/font/google";
-import { Rubik } from "next/font/google";
-
-const italiana = Italiana({ weight: "400", subsets: ["latin"] });
-const rubik = Rubik({ weight: "300", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Arkas Creation | Writer",
@@ -25,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${italiana.className} ${rubik.className} relative overflow-x-hidden`}
+        className={`relative overflow-x-hidden`}
       >
         <header className="absolute top-0 z-10 w-full scroll-smooth">
           <Navbar />
