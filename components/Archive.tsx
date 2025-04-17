@@ -53,10 +53,11 @@ const Archive = () => {
       const interval = setInterval(() => {
         setTranslateX((pre) => pre - 1);
       }, 40);
+      setImageGallary([...gallery, ...gallery, ...gallery]);
 
       return () => clearInterval(interval);
     }
-     setImageGallary([...gallery, ...gallery, ...gallery])
+     
 
   }, [screenWidthElement]);
 
