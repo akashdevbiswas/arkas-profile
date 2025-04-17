@@ -6,8 +6,8 @@ import constants from "@/constants";
 const Archive = () => {
   const { gallery } = constants;
 
-  const imageGallary = [...gallery, ...gallery, ...gallery];
-
+  const [imageGallary, setImageGallary] = useState<>([...gallery]);
+  
   const [translateX, setTranslateX] = useState(0);
 
   const [isVisible, setIsVisible] = useState(false);
@@ -56,6 +56,7 @@ const Archive = () => {
 
       return () => clearInterval(interval);
     }
+     setImageGallary([...gallery, ...gallery, ...gallery])
 
   }, [screenWidthElement]);
 
