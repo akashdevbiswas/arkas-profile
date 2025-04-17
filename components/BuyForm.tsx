@@ -11,8 +11,8 @@ const BuyForm = ({ buyOptions , bookName }: { buyOptions: BuyOption[] , bookName
 
     const {name} = buyOptions[selectedOption];
 
-    const message = `Hey,
-I interested to bye a *${name}* of _${bookName}_`;
+    const message = `Hello
+I am interested to buy a *${name}* of the book, _${bookName}_`;
     const encodedMessage = encodeURI(message);
 
     return `https://wa.me/+918240768751?text=${encodedMessage}`
