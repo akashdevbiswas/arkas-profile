@@ -6,7 +6,7 @@ import constants from "@/constants";
 const Archive = () => {
   const { gallery } = constants;
 
-  const [imageGallary, setImageGallary] = useState<>([...gallery]);
+  const [imageGallary, setImageGallary] = useState([...gallery]);
   
   const [translateX, setTranslateX] = useState(0);
 
