@@ -4,10 +4,11 @@ import paper from "@/public/paper.jpg";
 import { StaticImageData } from "next/image";
 import first from "@/public/ver4.jpeg";
 import second from "@/public/hori1.jpeg";
-import third from "@/public/hori9.jpeg";
-import forth from "@/public/hori2.jpeg";
-import fifth from "@/public/hori3.jpeg";
-import sixth from "@/public/ver2.jpeg";
+import third from '@/public/garden.jpg'
+import forth from "@/public/hori9.jpeg";
+import fifth from "@/public/hori2.jpeg";
+import sixth from "@/public/hori3.jpeg";
+import seventh from "@/public/ver2.jpeg";
 
 const constants: {
   reviews: string[];
@@ -15,12 +16,20 @@ const constants: {
   blogs: Blogs[];
   gallery: StaticImageData[];
 } = {
-  gallery: [first, second, third, forth, fifth, sixth],
+  gallery: [first, second, third, forth, fifth, sixth,seventh],
   reviews: [
     "I am a man of science. I don’t consider myself an activist. I am here to just observe report and draw conclusions. I leave activism to the activists.",
-    "I am a man of science. I don’t consider myself an activist. I am here to just observe report and draw conclusions. I leave activism to the activists.",
-    "I am a man of science. I don’t consider myself an activist. I am here to just observe report and draw conclusions. I leave activism to the activists.",
-    "I am a man of science. I don’t consider myself an activist. I am here to just observe report and draw conclusions. I leave activism to the activists.",
+    "The temptation of the forbidden is an urge too great to ignore.",
+    "But persuasion by the persuasive often produces the desired result.",
+    "Don’t worry my child, politics is a dirty game. It consumes many in its deadly tentacles.",
+    "My dear, I don’t care if they are Red, Green or Saffron. Neither do I care if they are in power or opposition. My duty is to only stay true to truth. Nothing but the truth matters to me.",
+    "Once I was in love you know. And in love, you learn things.",
+    "It was war. And in war, you don’t have to pretend to be civilized. To be honest, it’s a very liberating experience. You don’t remain bound by the laws and regulations of society.",
+    "Life is a tad bit too short to dwell on things that are long gone.",
+    "For a father who has lighted his son’s funeral pyre though, sleep is a luxury that god forbids him from.",
+    "In war though, a soldier doesn’t have the luxury to afford mercy. It may cost him his life.",
+    "The promise of publicity is a deadly tool when used with efficacy.",
+    "Not all Santa Clauses wear capes; some wear denim with military boots.",
   ],
   books: [
     {
@@ -45,7 +54,7 @@ const constants: {
       title: "Death Note of a Dreamer",
       writerName: "Ritwik Ghosh",
       image: paper,
-      url:'',
+      url: "https://www.facebook.com/share/p/1Bb25Fxo5N/",
       writing: [
         `
 When they talk death
@@ -118,7 +127,7 @@ And that is all but crystal clear
       title: "To be a Man",
       writerName: "Ritwik Ghosh",
       image: men,
-      url:'',
+      url: "https://www.facebook.com/share/p/197w5kzLn3/",
       writing: [
         `It\’s a disgrace to being a man
         If you falter; to do what you can
@@ -166,7 +175,7 @@ And that is all but crystal clear
       title: "The Breakfast Girl",
       writerName: "Ritwik Ghosh",
       image: women,
-      url:'',
+      url: "https://www.facebook.com/share/p/1BKcKH3iwk/",
       writing: [
         `Among all the smiles
 In this fleeting world;
@@ -212,5 +221,5 @@ export interface Blogs {
   writerName: string;
   image: StaticImageData;
   writing: string[];
-  url:string;
+  url: string;
 }

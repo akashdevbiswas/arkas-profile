@@ -33,7 +33,9 @@ export default function RootLayout({
             </p>
             <div className="flex gap-2 items-center">
               <p>Site By</p>
+              <a href="https://paletteriots.github.io/main-site/">
               <Image alt="developer" src={developer} />
+              </a>
             </div>
           </div>
         </footer>

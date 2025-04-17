@@ -118,7 +118,7 @@ const Reviews = () => {
       style={{
         opacity: isVisible ? 1 : 0,
       }}
-      className={`scroll__appear w-full h-[300px] md:h-[450px] flex flex-col gap-10 lg:gap-[70px] py-4 md:py-10 mt-[50px] md:mt-[70px]`}
+      className={`scroll__appear w-full h-auto md:h-[300px] md:h-[450px] flex flex-col gap-10 lg:gap-[70px] py-4 md:py-10 mt-[50px] md:mt-[40px] `}
     >
       <div className="w-[60px] md:w-[90px] lg:w-[120px] xl:w-fit mx-auto">
         <Image alt="comma" src={comma} className="w-full object-cover" />

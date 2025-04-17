@@ -46,7 +46,7 @@ const About = () => {
           About Me
         </h2>
         <div className="w-[85%] flex flex-col gap-3 md:gap-5">
-          <p className="font-rubik font-light text-base lg:text-[18px] text-center leading-5">
+          <p className="font-rubik font-light text-base lg:text-[18px] text-center leading-5 ">
             The author is a novelist, doctor & environmentalist who writes on
             issues most relevant but yet underrepresented in the current social
             and political discourse. His focus on love, loss & everything in

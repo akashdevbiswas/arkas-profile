@@ -33,10 +33,10 @@ const Creations = () => {
       style={{ opacity: isVisible ? 1 : 0 }}
       ref={elementRef}
       id="creations"
-      className="scroll__appear my-[20px] md:my-[100px]"
+      className="scroll__appear my-[20px] md:my-[200px]"
     >
       <Heading heading="Creations of the Author"/>
-      <div className="mt-[40px] md:mt-[60px] lg:mt-[120px] gradient_bg2 relative py-[40px] md:py-[80px] flex lg:block flex-col items-center gap-5">
+      <div className="mt-[40px] md:mt-[60px] lg:mt-[160px] gradient_bg2 relative py-[40px] md:py-[80px] flex lg:block flex-col items-center gap-5">
         <div className="relative lg:absolute w-[60%] lg:w-[300px] lg:h-[500px] xl:w-[354px] xl:h-[586px] lg:right-[15%] lg:top-1/2 lg:-translate-y-1/2 lg:rotate-[10deg]">
           <div className="w-full h-full relative before:absolute before:w-full before:h-full before:bg-black before:top-0 before:left-0 before:translate-x-[10px] before:-z-10 before:rounded-2xl ">
             <Image

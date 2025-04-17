@@ -4,17 +4,32 @@ import { BuyOption } from "@/constants";
 import React, { useState } from "react";
 import Button from "./Button";
 
-const BuyForm = ({ buyOptions }: { buyOptions: BuyOption[] }) => {
+const BuyForm = ({ buyOptions , bookName }: { buyOptions: BuyOption[] , bookName:string }) => {
   const [selectedOption, setSelectedOption] = useState(0);
 
-  const handleOnClick = (index: number) => {
+  const getMessage = ()=>{
 
-    const {inStock} = buyOptions[index];
+    const {name} = buyOptions[selectedOption];
+
+    const message = `Hey,
+I interested to bye a *${name}* of _${bookName}_`;
+    const encodedMessage = encodeURI(message);
+
+    return `https://wa.me/+918240768751?text=${encodedMessage}`
+  }
+
+  const [url, setUrl] = useState(getMessage());
+
+  const handleOnClick = (index: number) => {
+    const {inStock } = buyOptions[index];
     if(!inStock){
       return;
     }
     setSelectedOption(index);
+    const url = getMessage();
+    setUrl(url);
   };
+
 
   return (
     <div className="w-full flex flex-col gap-10 mt-[20px]">
@@ -29,7 +44,7 @@ const BuyForm = ({ buyOptions }: { buyOptions: BuyOption[] }) => {
           />
         ))}
       </div>
-      <Button btnType="secondary" buttonName="Purchase" className="w-full" />
+      <Button url={url} btnType="secondary" buttonName="Purchase" className="w-full" />
     </div>
   );
 };

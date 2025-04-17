@@ -5,7 +5,6 @@
 @import "tailwindcss";
 
 
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -68,7 +67,7 @@ body {
   @apply font-semibold
 }
 .quote-button{
-  @apply cursor-pointer h-[50px] z-10 absolute top-[20%];
+  @apply cursor-pointer h-[50px] z-10 absolute top-[30%];
 }
 
 .fade-in__animation{

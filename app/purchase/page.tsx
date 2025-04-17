@@ -44,7 +44,7 @@ const PurchasePage = () => {
             <h2 className="font-light">by {writerName}</h2>
             <p className="font-outfit font-semibold">Rs {price}</p>
           </div>
-          <BuyForm buyOptions={options} />
+          <BuyForm bookName={title} buyOptions={options} />
         </div>
       </div>
 
