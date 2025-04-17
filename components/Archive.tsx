@@ -7,42 +7,65 @@ import constants from '@/constants';
 const Archive = () => {
 
 
-    const {gallery} = constants;
+  const { gallery } = constants;
 
-    const [isVisible, setIsVisible] = useState(false);
-      const elementRef = useRef(null);
-    
-      useEffect(() => {
-        const observer = new IntersectionObserver(
-          ([entry]) => {
-            if (entry.isIntersecting) {
-              setIsVisible(true);
-              observer.unobserve(entry.target);
-            }
-          },
-          { threshold: 0.1 }
-        );
-    
-        if (elementRef.current) {
-          observer.observe(elementRef.current);
+  const imageGallary = [...gallery, ...gallery, ...gallery];
+
+  const [translateX, setTranslateX] = useState(0);
+
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
         }
-    
-        return () => observer.disconnect();
-      }, []);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const screenWidthElement = useRef<HTMLDivElement>(null);
+
+
+  useEffect(()=>{
+    const width = screenWidthElement.current?.getBoundingClientRect().width;
+
+    if(width && width > 900){
+      const interval = setInterval(() => {
+        setTranslateX(pre => pre - 1)
+      }, 30);
+
+    return ()=>clearInterval(interval);
+    }
+  },[screenWidthElement])
 
   return (
-    <div ref={elementRef} style={{opacity: `${isVisible?1:0}`}} id='archive' className='bg-[#DAC2A0] mt-[50px] md:mt-[100px] pt-4 flex flex-col gap-5 lg:gap-[51px] scroll__appear '>
-        <div className='main__container mx-auto flex flex-col gap-2'>
-            <h2 className='w-fit mx-auto text-3xl lg:text-[40px] font-italiana mt-5 '>THE ARCHIVE</h2>
-            <p className='w-[90%] lg:w-[646] mx-auto text-center font-rubik italic font-[300] text-base md:text-xl leading-6'>Here resides some photos, notes and memoirs associated with the author&apos;s life. As new items become available, this remarkable body of work will evolve while being accessible to all.</p>
+    <div ref={elementRef} style={{ opacity: `${isVisible ? 1 : 0}` }} id='archive' className='bg-[#DAC2A0] mt-[50px] md:mt-[100px] pt-4 flex flex-col gap-5 lg:gap-[51px] scroll__appear '>
+      <div className='main__container mx-auto flex flex-col gap-2'>
+        <h2 className='w-fit mx-auto text-3xl lg:text-[40px] font-italiana mt-5 '>THE ARCHIVE</h2>
+        <p className='w-[90%] lg:w-[646] mx-auto text-center font-rubik italic font-[300] text-base md:text-xl leading-6'>Here resides some photos, notes and memoirs associated with the author&apos;s life. As new items become available, this remarkable body of work will evolve while being accessible to all.</p>
+      </div>
+      <div ref={screenWidthElement} className='w-full overflow-hidden '>
+        <div style={{
+          transform: `translateX(${translateX}px)`
+        }} className='w-auto h-auto md:h-[286px] flex flex-col md:flex-row transition-transform ease-linear'>
+          {
+            imageGallary.map((image, index) => (
+              <Image width={200} height={200} key={index} src={image} alt="archive" className='object-cover h-full w-auto ' />
+            ))
+          }
         </div>
-        <div className='w-full h-auto md:h-[286px] flex flex-col md:flex-row '>
-            {
-                gallery.map((image, index) => (
-                    <Image width={200} height={200} key={index} src={image} alt="archive" className='object-cover h-full w-auto'/>
-                ))
-            }
-        </div>
+      </div>
     </div>
   )
 }

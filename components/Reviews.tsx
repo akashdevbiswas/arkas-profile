@@ -29,7 +29,6 @@ const Reviews = () => {
     if(width){
       setWidth(+width);
     }
-
   },[]);
 
 
