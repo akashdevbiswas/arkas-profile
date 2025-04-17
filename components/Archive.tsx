@@ -31,7 +31,7 @@ const Archive = () => {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.01 }
+      { threshold: thresHold }
     );
 
     if (elementRef.current) {
